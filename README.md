@@ -1,8 +1,8 @@
-# exporter-prometheus-grafana-cadvisor-alertmanager
+# node-exporter-prometheus-grafana-cadvisor-alertmanager
 
 # 🚀 A docker-compose stack for Prometheus monitoring with Grafana 🚀
 
-https://github.com/coding-to-music/exporter-prometheus-grafana-cadvisor-alertmanager
+https://github.com/coding-to-music/node-exporter-prometheus-grafana-cadvisor-alertmanager
 
 From / By Brian Christner https://github.com/vegasbrianc/prometheus
 
@@ -22,7 +22,7 @@ git add .
 git remote remove origin
 git commit -m "first commit"
 git branch -M main
-git remote add origin git@github.com:coding-to-music/exporter-prometheus-grafana-cadvisor-alertmanager.git
+git remote add origin git@github.com:coding-to-music/node-exporter-prometheus-grafana-cadvisor-alertmanager.git
 git push -u origin main
 ```
 

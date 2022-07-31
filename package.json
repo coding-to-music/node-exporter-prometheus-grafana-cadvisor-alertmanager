@@ -1,5 +1,5 @@
 {
-  "name": "exporter-prometheus-grafana-cadvisor-alertmanager",
+  "name": "node-exporter-prometheus-grafana-cadvisor-alertmanager",
   "version": "1.0.0",
   "description": "A docker-compose stack for Prometheus monitoring",
   "main": "index.js",
