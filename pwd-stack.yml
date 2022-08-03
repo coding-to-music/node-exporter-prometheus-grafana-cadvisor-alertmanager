@@ -30,7 +30,7 @@ services:
       - cadvisor
     networks:
       - back-tier
-    restart: always
+    restart: unless-stopped
     deploy:
       placement:
         constraints:
@@ -51,7 +51,7 @@ services:
       - 9100:9100
     networks:
       - back-tier
-    restart: always
+    restart: unless-stopped
     deploy:
       mode: global
 
@@ -63,7 +63,7 @@ services:
       - alertmanager_config_data:/etc/alertmanager/
     networks:
       - back-tier
-    restart: always
+    restart: unless-stopped
     command:
       - "--config.file=/etc/alertmanager/config.yml"
       - "--storage.path=/alertmanager"
@@ -82,7 +82,7 @@ services:
       - 8080:8080
     networks:
       - back-tier
-    restart: always
+    restart: unless-stopped
     deploy:
       mode: global
   source:
