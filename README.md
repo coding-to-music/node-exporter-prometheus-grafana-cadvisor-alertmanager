@@ -26,6 +26,57 @@ git remote add origin git@github.com:coding-to-music/node-exporter-prometheus-gr
 git push -u origin main
 ```
 
+## Results
+
+```
+docker compose up
+```
+
+works
+
+```
+docker compose -f pwd-stack.yml up
+```
+
+works
+
+```
+docker compose -f docker-stack.yml up
+```
+
+works
+
+```
+docker compose -f docker-traefik-stack.yml up
+```
+
+Output:
+
+```
+[+] Running 2/5
+[+] Running 5/5ing                                                                                                                                                                                                                                                   1.4s
+ ⠿ traefik Pulled                                                                                                                                                                                                                                                    2.0s
+   ⠿ e7c96db7181b Already exists                                                                                                                                                                                                                                     0.0s
+   ⠿ 68e7f8284806 Pull complete                                                                                                                                                                                                                                      0.4s
+   ⠿ a4bee532dd17 Pull complete                                                                                                                                                                                                                                      1.5s
+   ⠿ 25749e209766 Pull complete                                                                                                                                                                                                                                      1.6s
+[+] Running 0/0
+ ⠿ Network inbound  Error                                                                                                                                                                                                                                            0.0s
+failed to create network inbound: Error response from daemon: This node is not a swarm manager. Use "docker swarm init" or "docker swarm join" to connect this node to swarm and try again.
+```
+
+Grafana http://localhost:3000/dashboards
+
+Prometheus http://localhost:9090
+
+cAdvisor http://localhost:8080/
+
+Alertmanager http://localhost:9093/#/alerts
+
+node_exporter http://localhost:9100/metrics
+
+## Original Repo:
+
 ![](https://github.com/vegasbrianc/prometheus/workflows/prometheus%20test/badge.svg)
 
 # Contents
